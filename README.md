@@ -1,21 +1,21 @@
 # photoView.js
 一款移动端图片滑动查看插件，类似图片相册的效果，简单易用，支持VUE。
 
-## 单页面引用
+#### 单页面引用
 <script src="./photoView.js"></script>
 
-## 单页面使用
+#### 单页面使用
   var photoView = new PhotoView({
                       data: ['http://xxx1.jpg','http://xxx2.jpg'],
                       dom: '#pic'
                   })
   photoView.open(index)
 
-## VUE中引用
+#### VUE中引用
 1. 打开结尾注释 export default PhotoView
 2. import PhotoView from '../../util/photoView.js'
 
-## VUE中使用
+#### VUE中使用
   mounted () {
     this.photoView = new PhotoView({
                          data: ['http://xxx1.jpg','http://xxx2.jpg'],
@@ -28,7 +28,7 @@
     }
   }
   
-  ## 功能简介
+  #### 功能简介
   
   1.无需写HTML结构，自动创建
   
