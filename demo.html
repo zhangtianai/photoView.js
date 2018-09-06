@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <script src="./photoView.js"></script>
+    <link rel="stylesheet" href="./css/photoView.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+        #pic {
+            width: 100%;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        li {
+            width: 50%;
+            height: 100%;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="pic">
+        <ul>
+            <li class="img-wrap"><img src="./images/1.jpg" index="0" alt=""></li>
+            <li class="img-wrap"><img src="./images/2.jpg" index="1" alt=""></li>
+            <li class="img-wrap"><img src="./images/3.jpg" index="2" alt=""></li>
+            <li class="img-wrap"><img src="./images/4.jpg" index="3" alt=""></li>
+            <li class="img-wrap"><img src="./images/5.jpg" index="4" alt=""></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function () {
+            // 图片地址数组
+            var imgAry = [
+                './images/1.jpg',
+                './images/2.jpg',
+                './images/3.jpg',
+                './images/4.jpg',
+                './images/5.jpg'
+            ]
+            // 创建实例，需要绑定的DOM元素和图片地址
+            var photoView = new PhotoView({
+                data: imgAry,
+                dom: '#pic'
+            })
+
+            // 点击相应图片打开相册，并传入索引值
+            document.querySelector('ul').onclick = function (e) {
+                photoView.open(e.target.getAttribute('index'))
+            }
+        }
+    </script>
+</body>
+</html>

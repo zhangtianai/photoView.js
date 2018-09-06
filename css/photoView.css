@@ -1,0 +1,30 @@
+#__photoview {
+    animation: fadeIn .2s linear 0s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+    overflow: hidden;
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    overflow: auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+    overflow: hidden;
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    overflow: auto;
+  }
+}
