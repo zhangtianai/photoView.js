@@ -1,6 +1,9 @@
 # photoView.js
 一款移动端图片滑动查看插件，类似图片相册的效果，简单易用，支持VUE。
 
+#### 效果预览
+![预览图](https://github.com/yeguangcheng/photoView.js/blob/master/images/20180906105740.png?raw=true)
+
 #### 单页面引用
 <script src="./photoView.js"></script>
 
